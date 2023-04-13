@@ -26,7 +26,7 @@ from lookuptool import CsvLookupTool
 class ReadRetrieveReadApproach(Approach):
 
     template_prefix = \
-"あなたは日本の歴史に関する質問をサポートする教師アシスタントです。" \
+"あなたは車の説明書に関する質問をサポートする教師アシスタントです。" \
 "以下の情報源に記載されているデータのみを用いて、質問に答えてください。" \
 "各ソースには、名前の後にコロンと実際のデータがあり、レスポンスで使用する各データのソース名を引用します。" \
 "例えば、質問が「空の色は何色ですか」というもので、ソースの1つに「info-123.txt:空は曇っていないときはいつでも青い」と書いてあれば、「空は青い [info-123.txt]」と答えればよいのです。" \
@@ -42,7 +42,7 @@ Question: {input}
 
 Thought: {agent_scratchpad}"""    
 
-    CognitiveSearchToolDescription = "日本の歴史情報の検索に便利です。"
+    CognitiveSearchToolDescription = "車の説明書の検索に便利です。"
 
     def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
         self.search_client = search_client
